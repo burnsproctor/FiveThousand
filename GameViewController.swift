@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SharkORM
 
 class GameViewController: UIViewController {
     var game: Game!
@@ -15,6 +16,7 @@ class GameViewController: UIViewController {
     var dice = [Dice]()
     var playerIndex = 0
     var startingSelectedDiceCount = 0
+    
     @IBOutlet var numberOfPlayasLabel: UILabel!
     @IBOutlet var playerNameLabel: UILabel!
     @IBOutlet var playerBankScore: UILabel!
@@ -28,6 +30,7 @@ class GameViewController: UIViewController {
     @IBOutlet var dice4: UIImageView!
     @IBOutlet var dice5: UIImageView!
     @IBOutlet var dice6: UIImageView!
+    
     var diceImageViews = [UIImageView]()
     
     override func viewDidLoad() {
@@ -40,9 +43,13 @@ class GameViewController: UIViewController {
     }
     
     
+    
     override func viewDidAppear(_ animated: Bool) {
         game.newPlayerTurn()
-        getNewPlayerNameText(playerIndex: game.currentPlayerIndex)
+        if game.player().name == "Unknown Player" {
+            getNewPlayerNameText(playerIndex: game.currentPlayerIndex)
+        }
+        updatePlayerNameLabel()
     }
     
     
@@ -85,6 +92,16 @@ class GameViewController: UIViewController {
         if let error = game.checkForBust() {
             game.endCurrentTurn()
             if game.checkForWin() {
+                let savedGame = Game_DB(dictionary: ["numberOfPlayers" : game.numberOfPlayers, "winningPlayerIndex" : game.winningPlayerIndex, "finalRoundScoreToBeat" : game.finalRoundScoreToBeat, "winningPlayerName" : game.getPlayerName(playerIndex: game.currentPlayerIndex), "completedAt" : game.getCurrentDate()])
+                savedGame.commit()
+                
+                let gameID = getGameID()
+
+                for player in game.players {
+                    let savedPlayer = Player_DB(dictionary: ["playerName" : player.name, "gameID" : gameID])
+                    savedPlayer.commit()
+                }
+                
                 endGame()
                 return
             }
@@ -97,6 +114,12 @@ class GameViewController: UIViewController {
             updatePlayerNameLabel()
         }
         updatePlayerScore()
+    }
+    
+    
+    func getGameID() -> Int {
+        let results = Game_DB.query().order(byDescending: "Id").ids()
+        return results[0] as! Int
     }
     
     
@@ -221,7 +244,7 @@ class GameViewController: UIViewController {
         endGameAlert.addAction(newGame)
         present(endGameAlert, animated: true, completion: nil)
     }
-    
+
     
     func alertHandler2(error: GameError) {
         let alert = UIAlertController(title: "", message: error.description, preferredStyle: .alert)

@@ -9,22 +9,23 @@
 import Foundation
 
 class Player {
-    
     var name: String
     var score: Int
     var turn: Int
     var hasLost: Bool
+    var gameID: Int
+    var playerID: Int
     
     init(name: String) {
         self.name = name
         self.score = 0
         self.turn = 0
         self.hasLost = false
+        self.gameID = 0
+        self.playerID = 0
     }
     
     convenience init() {
         self.init(name: "Unknown Player")
     }
-    
-    
 }

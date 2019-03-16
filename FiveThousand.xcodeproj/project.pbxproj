@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E917E6DB9EF85FA9BC5E2DC /* Pods_FiveThousand.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493F46EB5B11563259A93BBF /* Pods_FiveThousand.framework */; };
+		9A333E3B222CB99800004401 /* Player_DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A333E3A222CB99800004401 /* Player_DB.swift */; };
 		9A5ED736216ADF44006A39D6 /* RollSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5ED735216ADF44006A39D6 /* RollSet.swift */; };
+		9A9C5581223B493B0051988A /* ReplayGamePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C5580223B493B0051988A /* ReplayGamePopupViewController.swift */; };
 		9AA07A8821644D8D00071271 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA07A8721644D8D00071271 /* AppDelegate.swift */; };
 		9AA07A8A21644D8D00071271 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA07A8921644D8D00071271 /* ViewController.swift */; };
 		9AA07A8D21644D8D00071271 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AA07A8B21644D8D00071271 /* Main.storyboard */; };
@@ -18,10 +21,17 @@
 		9AA07A9F2165853000071271 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA07A9E2165853000071271 /* GameViewController.swift */; };
 		9AA07AA1216AB10200071271 /* Turn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA07AA0216AB10200071271 /* Turn.swift */; };
 		9AA07AA3216AB9A700071271 /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA07AA2216AB9A700071271 /* Dice.swift */; };
+		9ACE22F52212627600590F4A /* Game_DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE22F42212627600590F4A /* Game_DB.swift */; };
+		9ACE22F8221CF21500590F4A /* LeaderBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE22F7221CF21500590F4A /* LeaderBoardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0127897C501109939602EF24 /* Pods-FiveThousand.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiveThousand.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FiveThousand/Pods-FiveThousand.debug.xcconfig"; sourceTree = "<group>"; };
+		1FE6B7F3BBEA9369A6837B46 /* Pods-FiveThousand.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiveThousand.release.xcconfig"; path = "Pods/Target Support Files/Pods-FiveThousand/Pods-FiveThousand.release.xcconfig"; sourceTree = "<group>"; };
+		493F46EB5B11563259A93BBF /* Pods_FiveThousand.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FiveThousand.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A333E3A222CB99800004401 /* Player_DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player_DB.swift; sourceTree = "<group>"; };
 		9A5ED735216ADF44006A39D6 /* RollSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollSet.swift; sourceTree = "<group>"; };
+		9A9C5580223B493B0051988A /* ReplayGamePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplayGamePopupViewController.swift; sourceTree = "<group>"; };
 		9AA07A8421644D8D00071271 /* FiveThousand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FiveThousand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AA07A8721644D8D00071271 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AA07A8921644D8D00071271 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +44,8 @@
 		9AA07A9E2165853000071271 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		9AA07AA0216AB10200071271 /* Turn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turn.swift; sourceTree = "<group>"; };
 		9AA07AA2216AB9A700071271 /* Dice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
+		9ACE22F42212627600590F4A /* Game_DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_DB.swift; sourceTree = "<group>"; };
+		9ACE22F7221CF21500590F4A /* LeaderBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,19 +53,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E917E6DB9EF85FA9BC5E2DC /* Pods_FiveThousand.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D0F0DCC4E62ED03BBA992AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0127897C501109939602EF24 /* Pods-FiveThousand.debug.xcconfig */,
+				1FE6B7F3BBEA9369A6837B46 /* Pods-FiveThousand.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8EF6A63816BD6D5D2E058086 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				493F46EB5B11563259A93BBF /* Pods_FiveThousand.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9AA07A7B21644D8D00071271 = {
 			isa = PBXGroup;
 			children = (
+				9A9C5580223B493B0051988A /* ReplayGamePopupViewController.swift */,
 				9AA07A8921644D8D00071271 /* ViewController.swift */,
 				9AA07A9E2165853000071271 /* GameViewController.swift */,
+				9ACE22F7221CF21500590F4A /* LeaderBoardViewController.swift */,
 				9AA07A8621644D8D00071271 /* FiveThousand */,
 				9AA07A8521644D8D00071271 /* Products */,
+				3D0F0DCC4E62ED03BBA992AA /* Pods */,
+				8EF6A63816BD6D5D2E058086 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +102,7 @@
 		9AA07A8621644D8D00071271 /* FiveThousand */ = {
 			isa = PBXGroup;
 			children = (
+				9ACE22F622138E6900590F4A /* GameEngine */,
 				9AA07A9921644F4000071271 /* Models */,
 				9AA07A8721644D8D00071271 /* AppDelegate.swift */,
 				9AA07A8B21644D8D00071271 /* Main.storyboard */,
@@ -81,13 +116,22 @@
 		9AA07A9921644F4000071271 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9ACE22F42212627600590F4A /* Game_DB.swift */,
+				9A333E3A222CB99800004401 /* Player_DB.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9ACE22F622138E6900590F4A /* GameEngine */ = {
+			isa = PBXGroup;
+			children = (
 				9AA07A9A21644F5500071271 /* Game.swift */,
 				9A5ED735216ADF44006A39D6 /* RollSet.swift */,
 				9AA07AA2216AB9A700071271 /* Dice.swift */,
 				9AA07AA0216AB10200071271 /* Turn.swift */,
 				9AA07A9C2164568600071271 /* Player.swift */,
 			);
-			path = Models;
+			path = GameEngine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,9 +141,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AA07A9621644D8E00071271 /* Build configuration list for PBXNativeTarget "FiveThousand" */;
 			buildPhases = (
+				1530C9F5245B47FFBAB73BEF /* [CP] Check Pods Manifest.lock */,
 				9AA07A8021644D8D00071271 /* Sources */,
 				9AA07A8121644D8D00071271 /* Frameworks */,
 				9AA07A8221644D8D00071271 /* Resources */,
+				AF445C126E4F803A712861F1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,17 +202,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1530C9F5245B47FFBAB73BEF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FiveThousand-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF445C126E4F803A712861F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FiveThousand/Pods-FiveThousand-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SharkORM/SharkORM.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SharkORM.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FiveThousand/Pods-FiveThousand-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9AA07A8021644D8D00071271 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A9C5581223B493B0051988A /* ReplayGamePopupViewController.swift in Sources */,
 				9AA07A9F2165853000071271 /* GameViewController.swift in Sources */,
+				9ACE22F52212627600590F4A /* Game_DB.swift in Sources */,
 				9AA07AA3216AB9A700071271 /* Dice.swift in Sources */,
 				9AA07A9D2164568600071271 /* Player.swift in Sources */,
+				9ACE22F8221CF21500590F4A /* LeaderBoardViewController.swift in Sources */,
 				9AA07A8A21644D8D00071271 /* ViewController.swift in Sources */,
 				9AA07A9B21644F5500071271 /* Game.swift in Sources */,
 				9A5ED736216ADF44006A39D6 /* RollSet.swift in Sources */,
+				9A333E3B222CB99800004401 /* Player_DB.swift in Sources */,
 				9AA07AA1216AB10200071271 /* Turn.swift in Sources */,
 				9AA07A8821644D8D00071271 /* AppDelegate.swift in Sources */,
 			);
@@ -312,6 +409,7 @@
 		};
 		9AA07A9721644D8E00071271 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0127897C501109939602EF24 /* Pods-FiveThousand.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -329,6 +427,7 @@
 		};
 		9AA07A9821644D8E00071271 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FE6B7F3BBEA9369A6837B46 /* Pods-FiveThousand.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

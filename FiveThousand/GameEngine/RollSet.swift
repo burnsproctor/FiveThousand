@@ -102,51 +102,55 @@ class RollSet {
         var tempScore = score
         let diceToScore = combineDice()
         if diceToScore.count == 6 {
-            tempScore = tempScore + scoreSixDice(diceToScore: diceToScore)
+            tempScore += 2500
         } else {
             for (key, value) in diceToScore {
                 if key == "1" {
                     if value < 3 {
-                        tempScore = tempScore + (100 * value)
+                        tempScore += (100 * value)
                     } else if value >= 3 && value < 6 {
                         let d = value % 3
-                        tempScore = tempScore + 1000 + (100 * d)
+                        tempScore += 1000 + (100 * d)
+                    } else if value == 6 {
+                        tempScore += 5000
                     }
                 }
                 if key == "2" {
                     if value == 3 {
-                        tempScore = tempScore + 200
+                        tempScore += 200
                     } else if value == 6 {
-                        tempScore = tempScore + 5000
+                        tempScore += 5000
                     }
                 }
                 if key == "3" {
                     if value == 3 {
-                        tempScore = tempScore + 300
+                        tempScore += 300
                     } else if value == 6 {
-                        tempScore = tempScore + 5000
+                        tempScore += 5000
                     }
                 }
                 if key == "4" {
                     if value == 3 {
-                        tempScore = tempScore + 400
+                        tempScore += 400
                     } else if value == 6 {
-                        tempScore = tempScore + 5000
+                        tempScore += 5000
                     }
                 }
                 if key == "5" {
                     if value < 3 {
-                        tempScore = tempScore + (50 * value)
+                        tempScore += (50 * value)
                     } else if value >= 3 && value < 6 {
                         let d = value % 3
-                        tempScore = tempScore + 500 + (50 * d)
+                        tempScore += 500 + (50 * d)
+                    } else if value == 6 {
+                        tempScore += 5000
                     }
                 }
                 if key == "6" {
                     if value == 3 {
-                        tempScore = tempScore + 600
+                        tempScore += 600
                     } else if value == 6 {
-                        tempScore = tempScore + 5000
+                        tempScore += 5000
                     }
                 }
             }
@@ -160,18 +164,18 @@ class RollSet {
     }
 
     
-    func scoreSixDice(diceToScore: [String: Int]) -> Int {
-        var numberOfKeys = 0
-        for i in 1...6 {
-            if diceToScore[String(i)] != nil {
-                numberOfKeys = numberOfKeys + 1
-            }
-        }
-        if numberOfKeys == 6 {
-            return 2500
-        }
-        return 5000
-    }
+//    func scoreSixDice(diceToScore: [String: Int]) -> Int {
+//        var numberOfKeys = 0
+//        for i in 1...6 {
+//            if diceToScore[String(i)] != nil {
+//                numberOfKeys = numberOfKeys + 1
+//            }
+//        }
+//        if numberOfKeys == 6 {
+//            return 2500
+//        }
+//        return 5000
+//    }
     
     
     func combineDice() -> [String: Int] {
@@ -187,7 +191,14 @@ class RollSet {
     
     func isValidScoring() -> GameError? {
         let diceToCheck = combineDice()
+        
+        // check if 1-6 works
+        if diceToCheck.count == 6 {
+            return nil
+        }
+        
         for (key, value) in diceToCheck {
+            
             if key == "1" && value < 1 {
                 return GameError.InvalidDiceSelection
             }

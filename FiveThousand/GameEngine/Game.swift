@@ -9,8 +9,7 @@
 import Foundation
 import SharkORM
 
-class Game: SRKObject {
-    
+class Game {
     var numberOfPlayers: Int
     var currentRound = 0
     var currentPlayerIndex = 0
@@ -24,7 +23,7 @@ class Game: SRKObject {
     var finalRound = false
     var finalRoundScoreToBeat = 0
     var finalRoundPlayerToBeatIndex = 0
-    var finalRoundPointThreshold = 500
+    var finalRoundPointThreshold = 5000
     var playersHaveLost = [Int]()
     var winningPlayerIndex = 0
     var currentRollSet: RollSet {
@@ -41,7 +40,17 @@ class Game: SRKObject {
         }
         self.turns.append(Turn(player: 0))
         self.playersHaveLost = []
-        super.init()
+    }
+    
+    init(replayPlayers: [Player_DB]) {
+        self.numberOfPlayers = replayPlayers.count
+        for replayPlayer in replayPlayers {
+            var newPlayer = Player()
+            newPlayer.name = replayPlayer.playerName
+            players.append(newPlayer)
+        }
+        self.turns.append(Turn(player: 0))
+        self.playersHaveLost = []
     }
     
     
@@ -50,6 +59,11 @@ class Game: SRKObject {
             fatalError("Invalid player access")
         }
         return players[currentPlayerIndex]
+    }
+    
+    
+    func getPlayerName(playerIndex: Int) -> String {
+        return players[playerIndex].name
     }
     
     
@@ -98,7 +112,7 @@ class Game: SRKObject {
             finalRoundPlayerToBeatIndex = currentPlayerIndex
             return nil
         }
-        if (player().score + potentialNewPoints) < finalRoundScoreToBeat {
+        if (player().score + potentialNewPoints) <= finalRoundScoreToBeat {
             if currentTurn.checkForNewTurn() {
                 let _ = currentTurn.getRollSetScore()
                 player().score = player().score + currentTurn.score
@@ -170,6 +184,15 @@ class Game: SRKObject {
             }
         }
         return false
+    }
+    
+    
+    func getCurrentDate() -> String {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd/yyyy"
+        let formattedDate = formatter.string(from: date)
+        return formattedDate
     }
 }
 

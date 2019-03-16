@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import SharkORM
+
 
 class ViewController: UIViewController {
     var numberOfPlayas = 2
+    var gameID = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +27,12 @@ class ViewController: UIViewController {
         }
     }
     
-    
     @IBAction func playersValueChanged(_ sender: UISegmentedControl) {
         numberOfPlayas = sender.selectedSegmentIndex + 2
+    }
+    
+    @IBAction func showLeaderBoard(_ sender: AnyObject) {
+        performSegue(withIdentifier: "showLeaderBoard", sender: sender)
     }
 }
 
