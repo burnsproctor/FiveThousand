@@ -30,10 +30,6 @@ class ViewController: UIViewController {
     @IBAction func playersValueChanged(_ sender: UISegmentedControl) {
         numberOfPlayas = sender.selectedSegmentIndex + 2
     }
-    
-    @IBAction func showLeaderBoard(_ sender: AnyObject) {
-        performSegue(withIdentifier: "showLeaderBoard", sender: sender)
-    }
 }
 
 

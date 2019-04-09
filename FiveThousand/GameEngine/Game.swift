@@ -23,7 +23,7 @@ class Game {
     var finalRound = false
     var finalRoundScoreToBeat = 0
     var finalRoundPlayerToBeatIndex = 0
-    var finalRoundPointThreshold = 5000
+    var finalRoundPointThreshold = 500
     var playersHaveLost = [Int]()
     var winningPlayerIndex = 0
     var currentRollSet: RollSet {
