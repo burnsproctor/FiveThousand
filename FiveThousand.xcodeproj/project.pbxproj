@@ -21,6 +21,8 @@
 		9AA07A9F2165853000071271 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA07A9E2165853000071271 /* GameViewController.swift */; };
 		9AA07AA1216AB10200071271 /* Turn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA07AA0216AB10200071271 /* Turn.swift */; };
 		9AA07AA3216AB9A700071271 /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA07AA2216AB9A700071271 /* Dice.swift */; };
+		9AB04066226EA1600014CC44 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB04065226EA1600014CC44 /* MapViewController.swift */; };
+		9AB04068226EA51F0014CC44 /* Location_DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB04067226EA51F0014CC44 /* Location_DB.swift */; };
 		9ACE22F52212627600590F4A /* Game_DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE22F42212627600590F4A /* Game_DB.swift */; };
 		9ACE22F8221CF21500590F4A /* LeaderBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACE22F7221CF21500590F4A /* LeaderBoardViewController.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +46,8 @@
 		9AA07A9E2165853000071271 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		9AA07AA0216AB10200071271 /* Turn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turn.swift; sourceTree = "<group>"; };
 		9AA07AA2216AB9A700071271 /* Dice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
+		9AB04065226EA1600014CC44 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		9AB04067226EA51F0014CC44 /* Location_DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location_DB.swift; sourceTree = "<group>"; };
 		9ACE22F42212627600590F4A /* Game_DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_DB.swift; sourceTree = "<group>"; };
 		9ACE22F7221CF21500590F4A /* LeaderBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +88,7 @@
 				9AA07A8921644D8D00071271 /* ViewController.swift */,
 				9AA07A9E2165853000071271 /* GameViewController.swift */,
 				9ACE22F7221CF21500590F4A /* LeaderBoardViewController.swift */,
+				9AB04065226EA1600014CC44 /* MapViewController.swift */,
 				9AA07A8621644D8D00071271 /* FiveThousand */,
 				9AA07A8521644D8D00071271 /* Products */,
 				3D0F0DCC4E62ED03BBA992AA /* Pods */,
@@ -118,6 +123,7 @@
 			children = (
 				9ACE22F42212627600590F4A /* Game_DB.swift */,
 				9A333E3A222CB99800004401 /* Player_DB.swift */,
+				9AB04067226EA51F0014CC44 /* Location_DB.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -261,9 +267,11 @@
 				9AA07AA3216AB9A700071271 /* Dice.swift in Sources */,
 				9AA07A9D2164568600071271 /* Player.swift in Sources */,
 				9ACE22F8221CF21500590F4A /* LeaderBoardViewController.swift in Sources */,
+				9AB04066226EA1600014CC44 /* MapViewController.swift in Sources */,
 				9AA07A8A21644D8D00071271 /* ViewController.swift in Sources */,
 				9AA07A9B21644F5500071271 /* Game.swift in Sources */,
 				9A5ED736216ADF44006A39D6 /* RollSet.swift in Sources */,
+				9AB04068226EA51F0014CC44 /* Location_DB.swift in Sources */,
 				9A333E3B222CB99800004401 /* Player_DB.swift in Sources */,
 				9AA07AA1216AB10200071271 /* Turn.swift in Sources */,
 				9AA07A8821644D8D00071271 /* AppDelegate.swift in Sources */,

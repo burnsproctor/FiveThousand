@@ -8,17 +8,22 @@
 
 import UIKit
 import SharkORM
+import CoreLocation
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, SRKDelegate {
 
     var window: UIWindow?
 
-
+    let center = UNUserNotificationCenter.current()
+    let locationManager = CLLocationManager()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         SharkORM.setDelegate(self)
         SharkORM.openDatabaseNamed("FiveThousandDB")
+        locationManager.requestAlwaysAuthorization()
         return true
     }
 

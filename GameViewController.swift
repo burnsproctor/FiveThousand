@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import SharkORM
+import CoreLocation
 
 class GameViewController: UIViewController {
     var game: Game!
@@ -32,6 +33,8 @@ class GameViewController: UIViewController {
     @IBOutlet var dice6: UIImageView!
     
     var diceImageViews = [UIImageView]()
+    
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,6 +100,9 @@ class GameViewController: UIViewController {
                 
                 let gameID = getGameID()
 
+                let savedLocation = Location_DB(dictionary: ["latitude": locationManager.location?.coordinate.latitude ?? 0.0, "longitude": locationManager.location?.coordinate.longitude ?? 0.0, "gameID": gameID])
+                savedLocation.commit()
+                
                 for player in game.players {
                     let savedPlayer = Player_DB(dictionary: ["playerName" : player.name, "gameID" : gameID])
                     savedPlayer.commit()
